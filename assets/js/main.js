@@ -208,7 +208,7 @@
 				// Add state?
 					if (typeof addState != 'undefined'
 					&&	addState === true)
-						history.pushState(null, null, '#');
+						history.pushState(null, null, '/');
 
 				// Handle lock.
 
@@ -295,7 +295,7 @@
 					$('<div class="close">Close</div>')
 						.appendTo($this)
 						.on('click', function() {
-							location.hash = '';
+							history.pushState(null, null, '/');
 						});
 
 				// Prevent clicks from inside article from bubbling.
