@@ -295,7 +295,7 @@
 					$('<div class="close">Close</div>')
 						.appendTo($this)
 						.on('click', function() {
-							history.pushState(null, null, '/');
+							$main._hide(true);
 						});
 
 				// Prevent clicks from inside article from bubbling.
