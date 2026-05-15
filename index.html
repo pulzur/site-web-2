@@ -6,8 +6,43 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<style>
+		.lang-switcher {
+			position: fixed;
+			top: 16px;
+			right: 20px;
+			z-index: 9999;
+			font-family: sans-serif;
+			font-size: 13px;
+			font-weight: 600;
+			letter-spacing: 1px;
+		}
+		.lang-switcher a {
+			color: rgba(255,255,255,0.5);
+			text-decoration: none;
+			padding: 4px 8px;
+			border-radius: 4px;
+			transition: color 0.2s;
+		}
+		.lang-switcher a:hover {
+			color: #fff;
+		}
+		.lang-switcher .active {
+			color: #fff;
+			border-bottom: 1px solid rgba(255,255,255,0.6);
+		}
+		.lang-switcher span {
+			color: rgba(255,255,255,0.3);
+		}
+	</style>
 	</head>
 	<body class="is-preload">
+
+		<div class="lang-switcher">
+			<a href="index.html" class="active">FR</a>
+			<span>|</span>
+			<a href="index-en.html">EN</a>
+		</div>
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -106,6 +141,14 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+		<script>
+			var switcher = document.querySelector('.lang-switcher');
+			document.querySelectorAll('#main article').forEach(function(article) {
+				new MutationObserver(function() {
+					switcher.style.display = article.classList.contains('active') ? 'none' : '';
+				}).observe(article, { attributes: true, attributeFilter: ['class'] });
+			});
+		</script>
 
 	</body>
 </html>
