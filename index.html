@@ -1,12 +1,63 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Consultant numérique</title>
+		<title>Consultant, formateur et intégrateur en transformation numérique et en automatisation des opérations</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	<style>
+		/* Grand titre : 3 px plus petit que la taille du thème */
+		#header h1 { font-size: calc(2.25rem - 3px); }
+		@media screen and (max-width: 736px) { #header h1 { font-size: calc(1.75rem - 3px); } }
+		/* Sous-titre de l'en-tête en minuscules */
+		#header .content h2 { text-transform: none; font-weight: 400; }
+		/* Phrase « Mon objectif » en casse normale */
+		#header .content p.objectif, #header .content p.objectif strong { text-transform: none; }
+		#header .content p.objectif { font-size: calc(0.8rem + 4px); padding-top: 50px; }
+		/* Boutons Analyser / Déployer / Optimiser : fond blanc, texte gras au rouge du logo au survol */
+		#header nav ul li a { transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out; }
+		#header nav ul li a:hover { color: #ED1C24; background-color: #ffffff; font-weight: 700; }
+		#header nav ul { overflow: hidden; } /* garde le fond blanc dans le cadre arrondi */
+		/* Courriel en minuscules */
+		a[href^="mailto:"] { text-transform: none; }
+		/* Courriel : texte gras au rouge du logo au survol (sans fond) */
+		#footer a[href^="mailto:"] { transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out; }
+		#footer a[href^="mailto:"]:hover { color: #ED1C24; font-weight: 700; border-bottom-color: transparent; opacity: 1; }
+		/* Transparence du bas de page appliquée à chaque élément, pour que le survol garde ses vraies couleurs */
+		#footer .copyright { opacity: 1; }
+		#footer .copyright > a { opacity: 0.75; }
+		/* Logo LinkedIn : petit zoom au survol */
+		#footer a[href*="linkedin"] img { transition: transform 0.2s ease-in-out; }
+		#footer a[href*="linkedin"]:hover img { transform: scale(1.2); }
+		/* Animation d'ouverture : les lignes de l'en-tête se construisent
+		   1. trait vertical logo -> texte, 2. lignes horizontales du centre vers les bords,
+		   3. trait vertical texte -> boutons. Démarre quand le thème retire "is-preload". */
+		@keyframes leo-trait-vertical { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+		@keyframes leo-lignes-horizontales { from { background-size: 0% 1px, 0% 1px; } to { background-size: 100% 1px, 100% 1px; } }
+		#header > *:before { transform-origin: top center; }
+		/* Les bordures du bloc texte sont redessinées en fond pour pouvoir les animer */
+		#header .content {
+			border-color: transparent;
+			background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(#ffffff, #ffffff);
+			background-repeat: no-repeat;
+			background-position: center top, center bottom;
+			background-size: 100% 1px, 100% 1px;
+			background-origin: border-box;
+			background-clip: border-box;
+		}
+		body.is-preload #header .content:before,
+		body.is-preload #header nav:before { transform: scaleY(0); }
+		body.is-preload #header .content { background-size: 0% 1px, 0% 1px; }
+		body:not(.is-preload) #header .content:before { animation: leo-trait-vertical 0.35s ease-out 0.3s both; }
+		body:not(.is-preload) #header .content { animation: leo-lignes-horizontales 0.6s ease-out 0.65s both; }
+		body:not(.is-preload) #header nav:before { animation: leo-trait-vertical 0.35s ease-out 1.25s both; }
+		@media (prefers-reduced-motion: reduce) {
+			body:not(.is-preload) #header .content:before,
+			body:not(.is-preload) #header .content,
+			body:not(.is-preload) #header nav:before { animation: none; }
+		}
+
 		.lang-switcher {
 			position: fixed;
 			top: 16px;
@@ -54,9 +105,9 @@
 						</div>
 						<div class="content">
 							<div class="inner">
-								<h1>Consultant numérique</h1>
-								<p>Des projets numériques... <br>Un seul point de contact </p>
-								<p><strong>Mon rôle:</strong> être votre chef d’orchestre numérique</p>
+								<h1>Consultant, formateur et intégrateur de</h1>
+								<h2>Solutions et transformation numérique et<br>automatisation des opérations</h2>
+								<p class="objectif"><strong>Mon objectif:</strong> votre autonomisation complète grâce à l'implémentation de solutions<br>robustes, pérennes et le transfert total des connaissances.</p>
 							</div>
 						</div>
 						<nav>
