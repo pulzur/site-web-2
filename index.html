@@ -15,6 +15,15 @@
 		/* Phrase « Mon objectif » en casse normale */
 		#header .content p.objectif, #header .content p.objectif strong { text-transform: none; }
 		#header .content p.objectif { font-size: calc(0.8rem + 4px); padding-top: 50px; }
+		/* Petite ligne de séparation entre le sous-titre et « Mon objectif » */
+		#header .content p.objectif { position: relative; }
+		#header .content p.objectif::before { content: ''; position: absolute; top: 25px; left: 50%; width: 60px; height: 1px; background: #ffffff; transform: translateX(-50%); }
+		/* Elle se trace de gauche à droite au chargement */
+		@keyframes leo-separateur { from { transform: translateX(-50%) scaleX(0); } to { transform: translateX(-50%) scaleX(1); } }
+		#header .content p.objectif::before { transform-origin: left center; }
+		body.is-preload #header .content p.objectif::before { transform: translateX(-50%) scaleX(0); }
+		body:not(.is-preload) #header .content p.objectif::before { animation: leo-separateur 0.5s ease-out 1s both; }
+		@media (prefers-reduced-motion: reduce) { body:not(.is-preload) #header .content p.objectif::before { animation: none; } }
 		/* Boutons Analyser / Déployer / Optimiser : fond blanc, texte gras au rouge du logo au survol */
 		#header nav ul li a { transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out; }
 		#header nav ul li a:hover { color: #ED1C24; background-color: #ffffff; font-weight: 700; }
