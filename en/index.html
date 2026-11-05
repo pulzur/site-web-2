@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Consultant, Trainer and Integrator in Digital Transformation and Operations Automation</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="canonical" href="https://digitaleo.ca/en/" />
+		<link rel="alternate" hreflang="fr" href="https://digitaleo.ca/" />
+		<link rel="alternate" hreflang="en" href="https://digitaleo.ca/en/" />
+		<link rel="alternate" hreflang="x-default" href="https://digitaleo.ca/" />
+		<meta name="description" content="Leonardo Venegas, consultant, trainer and integrator in digital transformation and operations automation in Montreal. Robust, long-lasting solutions and a full transfer of knowledge." />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<style>
+		/* Grand titre : 3 px plus petit que la taille du thème */
+		#header h1 { font-size: calc(2.25rem - 3px); }
+		@media screen and (max-width: 736px) { #header h1 { font-size: calc(1.75rem - 3px); } }
+		/* Sous-titre de l'en-tête en minuscules */
+		#header .content h2 { text-transform: none; font-weight: 400; }
+		/* Phrase « Mon objectif » en casse normale */
+		#header .content p.objectif, #header .content p.objectif strong { text-transform: none; }
+		#header .content p.objectif { font-size: calc(0.8rem + 4px); padding-top: 50px; }
+		/* Petite ligne de séparation entre le sous-titre et « Mon objectif » */
+		#header .content p.objectif { position: relative; }
+		#header .content p.objectif::before { content: ''; position: absolute; top: 25px; left: 50%; width: 60px; height: 1px; background: #ffffff; transform: translateX(-50%); }
+		/* Elle se trace de gauche à droite au chargement */
+		@keyframes leo-separateur { from { transform: translateX(-50%) scaleX(0); } to { transform: translateX(-50%) scaleX(1); } }
+		#header .content p.objectif::before { transform-origin: left center; }
+		body.is-preload #header .content p.objectif::before { transform: translateX(-50%) scaleX(0); }
+		body:not(.is-preload) #header .content p.objectif::before { animation: leo-separateur 0.5s ease-out 1s both; }
+		@media (prefers-reduced-motion: reduce) { body:not(.is-preload) #header .content p.objectif::before { animation: none; } }
+		/* Boutons Analyser / Déployer / Optimiser : fond blanc, texte gras au rouge du logo au survol */
+		#header nav ul li a { transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out; }
+		#header nav ul li a:hover { color: #ED1C24; background-color: #ffffff; font-weight: 700; }
+		#header nav ul { overflow: hidden; } /* garde le fond blanc dans le cadre arrondi */
+		/* Courriel en minuscules */
+		a[href^="mailto:"] { text-transform: none; }
+		/* Courriel : texte gras au rouge du logo au survol (sans fond) */
+		#footer a[href^="mailto:"] { transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out; }
+		#footer a[href^="mailto:"]:hover { color: #ED1C24; font-weight: 700; border-bottom-color: transparent; opacity: 1; }
+		/* Transparence du bas de page appliquée à chaque élément, pour que le survol garde ses vraies couleurs */
+		#footer .copyright { opacity: 1; }
+		#footer .copyright > a { opacity: 0.75; }
+		/* Logo LinkedIn : petit zoom au survol */
+		#footer a[href*="linkedin"] img { transition: transform 0.2s ease-in-out; }
+		#footer a[href*="linkedin"]:hover img { transform: scale(1.2); }
+		/* Animation d'ouverture : les lignes de l'en-tête se construisent
+		   1. trait vertical logo -> texte, 2. lignes horizontales du centre vers les bords,
+		   3. trait vertical texte -> boutons. Démarre quand le thème retire "is-preload". */
+		@keyframes leo-trait-vertical { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+		@keyframes leo-lignes-horizontales { from { background-size: 0% 1px, 0% 1px; } to { background-size: 100% 1px, 100% 1px; } }
+		#header > *:before { transform-origin: top center; }
+		/* Les bordures du bloc texte sont redessinées en fond pour pouvoir les animer */
+		#header .content {
+			border-color: transparent;
+			background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(#ffffff, #ffffff);
+			background-repeat: no-repeat;
+			background-position: center top, center bottom;
+			background-size: 100% 1px, 100% 1px;
+			background-origin: border-box;
+			background-clip: border-box;
+		}
+		body.is-preload #header .content:before,
+		body.is-preload #header nav:before { transform: scaleY(0); }
+		body.is-preload #header .content { background-size: 0% 1px, 0% 1px; }
+		body:not(.is-preload) #header .content:before { animation: leo-trait-vertical 0.35s ease-out 0.3s both; }
+		body:not(.is-preload) #header .content { animation: leo-lignes-horizontales 0.6s ease-out 0.65s both; }
+		body:not(.is-preload) #header nav:before { animation: leo-trait-vertical 0.35s ease-out 1.25s both; }
+		@media (prefers-reduced-motion: reduce) {
+			body:not(.is-preload) #header .content:before,
+			body:not(.is-preload) #header .content,
+			body:not(.is-preload) #header nav:before { animation: none; }
+		}
+
+
+			.lang-switcher {
+				position: fixed;
+				top: 16px;
+				right: 20px;
+				z-index: 9999;
+				font-family: sans-serif;
+				font-size: 13px;
+				font-weight: 600;
+				letter-spacing: 1px;
+			}
+			.lang-switcher a {
+				color: rgba(255,255,255,0.5);
+				text-decoration: none;
+				padding: 4px 8px;
+				border-radius: 4px;
+				transition: color 0.2s;
+			}
+			.lang-switcher a:hover {
+				color: #fff;
+			}
+			.lang-switcher .active {
+				color: #fff;
+				border-bottom: 1px solid rgba(255,255,255,0.6);
+			}
+			.lang-switcher span {
+				color: rgba(255,255,255,0.3);
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<div class="lang-switcher">
+			<a href="/">FR</a>
+			<span>|</span>
+			<a href="/en/" class="active">EN</a>
+		</div>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo" style="display: flex; justify-content: center; align-items: center;">
+							<img src="../images/leo4.png" alt="Logo" style="width: 150px; height: 150px; border-radius: 50%; object-fit: contain; background: white; display: block;" />
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Consultant, trainer and integrator of</h1>
+								<h2>Digital solutions and transformation and<br>operations automation</h2>
+								<p class="objectif"><strong>My goal:</strong> your complete autonomy through the implementation of<br>robust, long-lasting solutions and a full transfer of knowledge.</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#analyze">Analyze</a></li>
+								<li><a href="#deploy">Deploy</a></li>
+								<li><a href="#optimize">Optimize</a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Analyze -->
+							<article id="analyze">
+								<h2 class="major">Analyze</h2>
+								<span class="image main"><img src="../images/analyser.jpg" alt="" /></span>
+								<h3>Analyze upfront to be optimal</h3>
+								<p>Understanding your business processes, objectives and needs is essential. The best solution is not always the most expensive or the most complex. Sometimes a progressive, phased approach is more effective, more optimized and more reassuring.
+									<ul>
+										<li>Analyze, identify and understand your needs</li>
+										<li>Document your business processes</li>
+										<li>Produce a functional specifications document</li>
+									</ul>
+									<p><strong>In short:</strong> work upstream and support you throughout the development of your digital project.</p>
+							</article>
+
+						<!-- Deploy -->
+							<article id="deploy">
+								<h2 class="major">Deploy</h2>
+								<span class="image main"><img src="../images/deploy2.jpg" alt="" /></span>
+								<h3>Implement and deploy to better adapt</h3>
+								<p>Each solution is selected according to your needs and budget. You always remain in control and understand every step.
+									<ul>
+										<li>Test</li>
+										<li>Validate</li>
+										<li>Implement</li>
+										<li>Deploy</li>
+									</ul>
+									<p><strong>In short:</strong> no grey areas — by the end of the mandate, everything is clear and under control.</p>
+							</article>
+
+						<!-- Optimize -->
+							<article id="optimize">
+								<h2 class="major">Optimize</h2>
+								<span class="image main"><img src="../images/rouage2.jpg" alt="" /></span>
+								<h3>Ongoing monitoring and optimization beats a costly overhaul later</h3>
+								<p>To fully benefit from a digital transformation, it must be dynamic and continuously improving. A common mistake is thinking that once implementation is complete, the work is done. In reality, 80% of the work is done, but the remaining 20% is about monitoring and optimizing processes.</p>
+								<ul>
+									<li>Monitor and adjust predefined KPIs</li>
+									<li>Optimize based on results</li>
+									<li>Ensure continuous skill development</li>
+									<li>Maintain evolving and accessible documentation</li>
+								</ul>
+								<p><strong>In short:</strong> optimize continuously and you will stay ahead.</p>
+							</article>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">
+							<a href="mailto:contact@digitaleo.ca">contact@digitaleo.ca</a>
+							<a href="https://www.linkedin.com/in/leonardovenegas/" target="_blank">
+								<img src="../images/b&w-linkedin-logo.png" alt="LinkedIn" style="height: 24px; margin-left: 10px; vertical-align: middle;">
+							</a>
+						</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+		<script>
+			var switcher = document.querySelector('.lang-switcher');
+			document.querySelectorAll('#main article').forEach(function(article) {
+				new MutationObserver(function() {
+					switcher.style.display = article.classList.contains('active') ? 'none' : '';
+				}).observe(article, { attributes: true, attributeFilter: ['class'] });
+			});
+		</script>
+
+	</body>
+</html>
